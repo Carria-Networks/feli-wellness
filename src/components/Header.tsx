@@ -36,7 +36,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ${scrolled ? 'bg-green-600 shadow-md' : 'bg-transparent'}`}>
+    <header className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ${scrolled ? 'bg-primary shadow-md' : 'bg-transparent'}`}>
   <nav aria-label="Global" className={`w-full flex items-stretch justify-between px-4 transition-all duration-300 ${scrolled ? 'h-12' : 'h-24 lg:h-28'}`}>
         <div className="flex lg:hidden items-stretch h-full">
           <a href="/" className="-m-0 p-0 flex items-stretch h-full">
@@ -140,7 +140,7 @@ const Header = () => {
 
           <div className="flex items-center justify-center flex-1">
             <Button
-              className={`font-bold rounded-4xl transition-all duration-200 ${scrolled ? 'text-lg px-3 py-1 bg-white text-green-600 hover:bg-gray-100' : 'text-2xl px-4 py-2 bg-green-600 text-white hover:bg-green-700'}`}>
+              className={`font-bold rounded-4xl transition-all duration-200 ${scrolled ? 'text-lg px-3 py-1 bg-white text-primary hover:bg-gray-100' : 'text-2xl px-4 py-2 bg-primary text-white hover:bg-primary'}`}>
               Contact Us
             </Button>
           </div>
@@ -212,7 +212,7 @@ const Header = () => {
               </div>
               <div className="py-6">
                 <Button
-                  className={`rounded-4xl px-4 py-2 text-sm transition-colors duration-200 ${scrolled ? 'bg-white text-green-600 hover:bg-gray-100' : 'bg-green-600 text-white data-active:bg-green-700 data-hover:bg-green-500'}`}>
+                  className={`rounded-4xl px-4 py-2 text-sm transition-colors duration-200 ${scrolled ? 'bg-white text-primary hover:bg-gray-100' : 'bg-primary text-white data-active:bg-primary data-hover:bg-primary'}`}>
                   Contact Us
                 </Button>
               </div>

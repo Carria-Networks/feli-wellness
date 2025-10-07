@@ -1,7 +1,9 @@
-/* Remove default body margin so header can sit flush to the top */
 body {
   margin: 0;
   background-color: black;
+  /* Primary color and font */
+  --primary: #63b32e;
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
 /* Animated underline for nav items */
@@ -29,3 +31,12 @@ body {
 .nav-underline:focus {
   outline: none;
 }
+
+/* CSS variable based utilities using --primary */
+.bg-primary { background-color: var(--primary) !important; }
+.text-primary { color: var(--primary) !important; }
+.border-primary { border-color: var(--primary) !important; }
+.ring-primary { box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 12%, transparent); }
+.hover\:bg-primary:hover { background-color: var(--primary) !important; }
+.hover\:text-primary:hover { color: var(--primary) !important; }
+.focus\:ring-primary:focus { box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 12%, transparent); }

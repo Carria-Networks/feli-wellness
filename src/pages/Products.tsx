@@ -29,7 +29,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         ))}
       </ul>
       <div className="mt-auto">
-        <Button className="text-sm/6 font-semibold text-white bg-green-600 px-4 py-2 rounded-4xl w-full">
+        <Button className="text-sm/6 font-semibold text-white bg-primary px-4 py-2 rounded-4xl w-full">
           {product.cta}
         </Button>
       </div>

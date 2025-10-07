@@ -71,3 +71,5 @@ export default defineConfig([
   },
 ])
 ```
+
+Note: This project uses Tailwind CSS via Vite. If you add Tailwind directives (e.g. `@tailwind base;`) make sure to run the dev server with `npm run dev` (or `bun`/`pnpm` depending on your environment) so PostCSS/Tailwind can process the CSS. Lint warnings about unknown at-rules are expected in some editors until PostCSS runs.

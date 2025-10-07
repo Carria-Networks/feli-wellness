@@ -36,7 +36,7 @@ const About = () => {
             </ul>
           </div>
 
-          <Button className="text-sm/6 font-semibold text-white bg-green-600 px-4 py-2 rounded-4xl">
+          <Button className="text-sm/6 font-semibold text-white bg-primary px-4 py-2 rounded-4xl">
             Request Info Pack
           </Button>
         </div>

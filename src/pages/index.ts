@@ -1,17 +1,19 @@
-import About from './About'
-import Contacts from './Contacts'
-import Home from './Home'
-import Partners from './Partners'
-import Products from './Products'
-import Testimonies from './Testimonials'
-import About1 from './About1'
+import { lazy } from 'react'
+
+const DistributorRelationships = lazy(() => import('./DistributorRelationships'))
+const Contacts = lazy(() => import('./Contacts'))
+const Home = lazy(() => import('./Home'))
+const Partners = lazy(() => import('./Partners'))
+const Products = lazy(() => import('./Products'))
+const Testimonies = lazy(() => import('./Testimonials'))
+const About = lazy(() => import('./About'))
 
 export {
   Home,
-  About,
   Contacts,
-  About1,
+  About,
   Testimonies,
   Partners,
-  Products
+  Products,
+  DistributorRelationships
 }

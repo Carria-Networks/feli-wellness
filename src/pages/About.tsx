@@ -1,33 +1,46 @@
-const content = [
-  {
-    id: 2,
-    content: "Feli Wellness proudly serves as an independent distributor for Prife International and K2U Africa — two global leaders in the wellness and lifestyle industry. Through these partnerships, we bring innovative, science-backed products to local, regional markets and international markets, empowering individuals and families to live healthier and more balanced lives.",
-  },
-  {
-    id: 3,
-    content: "As part of our commitment, Feli Wellness also distributes Kangen Water — a revolutionary ionized alkaline water known for its over 100 uses, including hydration, detoxification, and home wellness applications.",
-  },
-  {
-    id: 4,
-    content: "At K2U Africa, the focus is on high-quality, highly effective health products guided by the philosophy of sustainable management and continuous progress. Meanwhile, Prife International strives to create health, beauty, and wealth for everyone through cutting-edge technology, a rewarding business model, and a shared vision of human advancement.",
-  },
-  {
-    id: 5,
-    content: "Feli Wellness bridges these world-class innovations with local communities — offering education, installation, after-sales support, and distribution while maintaining our independence and commitment to integrity, authenticity, and client satisfaction.",
-  },
-]
+import { Button } from "@headlessui/react"
+import { aboutBackground } from "../assets"
 
 const About = () => {
   return (
-    <section className="text-white container mx-auto p-4 mt-8">
-      <h2 className="text-center mb-4 text-4xl font-extrabold tracking-tight xl:text-6xl">Official Distributor Relationships</h2>
-      {
-        content.map((paragraph) => (
-          <p key={paragraph.id} className="mb-6 text-justify text-lg">
-            {paragraph.content}
+    <section className="text-white py-8 px-4"
+      style={{
+        background: `
+          linear-gradient(
+          rgba(0, 0, 0, 0.5) 80%,
+          rgba(0, 0, 0, 0.2) 100%
+          ),
+          url(${aboutBackground})
+        `,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}>
+      <div className="max-w-screen-xl mx-auto lg:py-16">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="mb-4 text-4xl tracking-tight font-extrabold text-white">Turn Wellness into Wealth</h1>
+          <p className="mb-6 font-light text-lg">
+            Beyond selling great products, Feli Wellness helps individuals build sustainable income via a structured
+            distributor program.
           </p>
-        ))
-      }
+
+          <p className="mb-6 font-light text-lg">
+            We provide training, mentoring, and marketing assets to help partners scale.
+          </p>
+
+          <div className="w-full max-w-prose mx-auto mb-6">
+            <ul className="font-light text-lg list-disc list-inside text-left">
+              <li className="mb-2">Structured onboarding & product certification</li>
+              <li className="mb-2">Personal growth and sales training</li>
+              <li className="mb-2">Marketing toolkits and lead-generation support</li>
+            </ul>
+          </div>
+
+          <Button className="text-sm/6 font-semibold text-white bg-green-600 px-4 py-2 rounded-4xl">
+            Request Info Pack
+          </Button>
+        </div>
+      </div>
     </section>
   )
 }

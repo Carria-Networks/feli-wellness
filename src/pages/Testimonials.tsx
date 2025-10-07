@@ -1,3 +1,5 @@
+import { partnerTestimonialsBackground } from "../assets"
+
 const testimonials = [
   {
     client: "Grace N.",
@@ -15,7 +17,13 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="p-8 text-black mb-12">
+    <section id="testimonials" className="p-8 text-black "
+      style={{
+        background: `url(${partnerTestimonialsBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}>
       <h2 className="text-3xl font-bold mb-6 text-center">What Our Customers & Partners Say</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((testimonial) => (

@@ -11,8 +11,7 @@ import {
 } from '@headlessui/react'
 
 import { Bars3Icon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/20/solid'
-import logo from '../assets/web/icon-512-maskable.png';
-import mobileLogo from '../assets/web/icon-512.png';
+import { largeScreenLogo, smallScreenLogo } from '../assets'
 
 const products = [
   { name: 'Product A' },
@@ -33,19 +32,18 @@ const Header = () => {
     }
 
     window.addEventListener('scroll', onScroll, { passive: true })
-    onScroll()
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
-    <header className={`fixed w-full z-20 top-0 start-0 transition-colors duration-300 ${scrolled ? 'bg-green-600 shadow-md' : 'bg-transparent'}`}>
-      <nav aria-label="Global" className="w-full flex items-center justify-between px-4 py-0">
-        <div className="flex lg:hidden">
-          <a href="/" className="-m-0 p-0">
+    <header className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ${scrolled ? 'bg-green-600 shadow-md' : 'bg-transparent'}`}>
+  <nav aria-label="Global" className={`w-full flex items-stretch justify-between px-4 transition-all duration-300 ${scrolled ? 'h-12' : 'h-24 lg:h-28'}`}>
+        <div className="flex lg:hidden items-stretch h-full">
+          <a href="/" className="-m-0 p-0 flex items-stretch h-full">
             <img
               alt=""
-              src={logo}
-              className="h-14 sm:h-16 md:h-20 w-auto"
+              src={largeScreenLogo}
+              className="h-full w-auto transition-all duration-300"
               style={{ display: 'block' }}
             />
           </a>
@@ -60,20 +58,19 @@ const Header = () => {
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:items-center lg:gap-4 lg:w-full">
-          <div className="flex items-center justify-center flex-1">
-            <a href="/" className="-m-0 p-0">
+  <div className="hidden lg:flex lg:items-stretch lg:gap-4 lg:w-full">
+          <div className="flex items-stretch justify-center flex-1 h-full">
+            <a href="/" className="-m-0 p-0 flex items-stretch h-full">
               <img
                 alt=""
-                src={logo}
-                className="h-24 sm:h-16 md:h-32 w-auto"
-                style={{ display: 'block' }}
+                src={largeScreenLogo}
+                className="h-full w-auto block transition-all duration-300"
               />
             </a>
           </div>
 
           <div className="flex items-center justify-center flex-1">
-            <a href="#home" className="text-2xl font-bold text-white text-center w-full">
+            <a href="#home" className={`font-bold text-white text-center w-full transition-all duration-300 ${scrolled ? 'text-lg' : 'text-2xl'}`}>
               <span className="nav-underline">Home</span>
             </a>
           </div>
@@ -99,7 +96,7 @@ const Header = () => {
                 aria-expanded={productsOpen}
                 onFocus={() => setProductsOpen(true)}
                 onBlur={() => setProductsOpen(false)}
-                className="flex items-center gap-x-1 text-2xl font-bold text-white"
+                className={`flex items-center gap-x-1 font-bold text-white transition-all duration-300 ${scrolled ? 'text-lg gap-x-1' : 'text-2xl gap-x-2'}`}
               >
                 <span className="nav-underline">Products</span>
                 <ChevronDownIcon aria-hidden="true" className="size-7 flex-none text-gray-500" />
@@ -130,20 +127,20 @@ const Header = () => {
           </div>
 
           <div className="flex items-center justify-center flex-1">
-            <a href="#partners" className="text-2xl font-bold text-white text-center w-full">
+            <a href="#partners" className={`font-bold text-white text-center w-full transition-all duration-300 ${scrolled ? 'text-lg' : 'text-2xl'}`}>
               <span className="nav-underline">Partners</span>
             </a>
           </div>
 
           <div className="flex items-center justify-center flex-1">
-            <a href="#about" className="text-2xl font-bold text-white text-center w-full">
+            <a href="#about" className={`font-bold text-white text-center w-full transition-all duration-300 ${scrolled ? 'text-lg' : 'text-2xl'}`}>
               <span className="nav-underline">About</span>
             </a>
           </div>
 
           <div className="flex items-center justify-center flex-1">
             <Button
-              className={`text-2xl font-bold px-4 py-2 rounded-4xl transition-colors duration-200 ${scrolled ? 'bg-white text-green-600 hover:bg-gray-100' : 'bg-green-600 text-white hover:bg-green-700'}`}>
+              className={`font-bold rounded-4xl transition-all duration-200 ${scrolled ? 'text-lg px-3 py-1 bg-white text-green-600 hover:bg-gray-100' : 'text-2xl px-4 py-2 bg-green-600 text-white hover:bg-green-700'}`}>
               Contact Us
             </Button>
           </div>
@@ -156,7 +153,7 @@ const Header = () => {
             <a href="/" className="-m-0 p-0">
               <img
                 alt=""
-                src={mobileLogo}
+                src={smallScreenLogo}
                 className="h-16 w-auto"
                 style={{ display: 'block' }}
               />

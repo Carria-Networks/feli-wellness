@@ -1,7 +1,17 @@
+import { contactBackground } from "../assets"
+
+
 const Contacts = () => {
   return (
-    <section >
-      <div className="py-12 lg:py-20 px-4 mx-auto max-w-screen-lg">
+    <section
+    className="p-8"
+      style={{
+        background: `url(${contactBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }} >
+      <div className="mx-auto max-w-screen-lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-4">
             <h2 className="text-3xl font-extrabold text-white">Contact Information</h2>

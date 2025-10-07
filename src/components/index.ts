@@ -1,6 +1,8 @@
-import Footer from "./Footer";
-import Header from "./Header";
-import Hero from "./Hero";
+import { lazy } from 'react'
+
+const Footer = lazy(() => import('./Footer'))
+const Header = lazy(() => import('./Header'))
+const Hero = lazy(() => import('./Hero'))
 
 
 export {

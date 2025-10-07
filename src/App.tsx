@@ -1,19 +1,34 @@
 import './App.css'
 import { Footer, Header } from './components'
-import { About, About1, Contacts, Home, Partners, Products, Testimonies } from './pages'
+import { DistributorRelationships, About, Contacts, Home, Partners, Products, Testimonies } from './pages'
+
+import { heroBackground } from './assets'
 
 function App() {
 
   return (
-    <main className="container mx-auto p-4">
-      <Header />
+    <main className="">
 
-      <div className="content">
-        <Home />
+      <div className="">
+        <div className="relative w-full h-auto">
+          <video
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            src={heroBackground}
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+          <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+          <div className="relative">
+            <Header />
+            <Home />
+          </div>
+        </div>
         <Products />
-        <About />
+        <DistributorRelationships />
         <Partners />
-        <About1 />
+        <About />
         <Testimonies />
         <Contacts />
       </div>

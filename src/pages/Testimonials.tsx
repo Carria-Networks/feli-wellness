@@ -84,9 +84,10 @@ const Testimonials = () => {
         setCurrentIndex(currentIndex === 0 ? maxIndex : currentIndex - 1);
       };
     
-      // const togglePlayPause = () => {
-      //   setIsPlaying(!isPlaying);
-      // };
+      const togglePlayPause = () => {
+        setIsPlaying(!isPlaying);
+      };
+      togglePlayPause()
   return (
 
           <div className='max-w-7xl mx-auto py-16'>

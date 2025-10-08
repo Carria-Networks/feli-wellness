@@ -36,7 +36,7 @@ const Hero = () => {
             </h1>
 
             <p className=" text-pretty text-white  text-md max-w-3xl mx-auto leading-relaxed">
-              Feli Wellness improves health and wellbeing with innovative products — from Kangen Water to healthy products and advanced wellness devices. We also empower individuals with training and a sustainable business model to build income and personal growth.
+            At Feli Wellness, we are dedicated to improving health and wellness through innovative products and business opportunities. We provide high-quality health supplements and advanced wellness devices designed to support a healthier lifestyle. Beyond products, Feli wellness empowers individuals to build sustainable income through our business model, offering personal growth, training, and financial freedom.
             </p>
 
             <div className=" flex items-center justify-center gap-x-6">

@@ -37,7 +37,7 @@ const Testimonials = () => {
       ];
     
       const [currentIndex, setCurrentIndex] = useState(0);
-      // const [isPlaying, setIsPlaying] = useState(true);
+      const [isPlaying] = useState(true);
     
       // Get slides per view based on screen size
       const getSlidesPerView = () => {
@@ -61,18 +61,18 @@ const Testimonials = () => {
       }, []);
     
       // Auto-scroll functionality
-      // useEffect(() => {
-      //   if (!isPlaying) return;
+      useEffect(() => {
+        if (!isPlaying) return;
     
-      //   const interval = setInterval(() => {
-      //     setCurrentIndex((prevIndex) => {
-      //       const maxIndex = memories.length - slidesPerView;
-      //       return prevIndex >= maxIndex ? 0 : prevIndex + 1;
-      //     });
-      //   }, 3000);
+        const interval = setInterval(() => {
+          setCurrentIndex((prevIndex) => {
+            const maxIndex = memories.length - slidesPerView;
+            return prevIndex >= maxIndex ? 0 : prevIndex + 1;
+          });
+        }, 3000);
     
-      //   return () => clearInterval(interval);
-      // }, [isPlaying, memories.length, slidesPerView]);
+        return () => clearInterval(interval);
+      }, [isPlaying, memories.length, slidesPerView]);
     
       const goToNext = () => {
         const maxIndex = memories.length - slidesPerView;
@@ -84,10 +84,7 @@ const Testimonials = () => {
         setCurrentIndex(currentIndex === 0 ? maxIndex : currentIndex - 1);
       };
     
-      // const togglePlayPause = () => {
-      //   setIsPlaying(!isPlaying);
-      // };
-      // togglePlayPause()
+
   return (
 
           <div className='max-w-7xl mx-auto py-16'>

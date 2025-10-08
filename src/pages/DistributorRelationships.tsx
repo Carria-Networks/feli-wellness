@@ -1,4 +1,7 @@
-import { distributorRelationshipsBackground } from "../assets"
+
+
+
+import distributor from "../assets/20.jpg"
 
 const content = [
   {
@@ -21,33 +24,32 @@ const content = [
 
 const DistributorRelationships = () => {
   return (
-    <section
-      className="text-white p-8"
-      id="distributor-relationships"
-      style={{
-        background: `
-        linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.6) 0%,
-        rgba(0, 0, 0, 0.5) 80%,
-        rgba(0, 0, 0, 0.2) 100%
-        ),
-        url(${distributorRelationshipsBackground})
-      `,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
-      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
-        Official Distributor Relationships
-      </h2>
-      {content.map((paragraph) => (
-        <p key={paragraph.id} className="mb-5 font-light text-white sm:text-xl">
-          {paragraph.content}
-        </p>
-      ))}
-    </section>
+    <div className="bg-gray-100 py-10"> 
+    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+ 
+<div className="my-5">
+            <a href="" className="p-2 font-bold rounded bg-gray-200 ">
+            Official Distributor Relationships
+            </a>
+
+</div>
+
+        {content.map((paragraph) => (
+          <p key={paragraph.id} className="mb-5 font-light text-gray-700 sm:text-lg">
+            {paragraph.content}
+          </p>
+        ))}
+      </div>
+      <div>
+        <img className="h-full object-cover rounded" src={distributor} alt="" />
+      </div>
+
+
+    </div>
+
+    </div>
+
   )
 }
 

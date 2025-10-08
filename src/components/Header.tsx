@@ -1,226 +1,168 @@
-'use client'
 
-import { useState, useEffect } from 'react'
-import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  Button,
-  DisclosurePanel
-} from '@headlessui/react'
 
-import { Bars3Icon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/20/solid'
-import { largeScreenLogo, smallScreenLogo } from '../assets'
+// import { useState, useEffect } from 'react'
 
-const products = [
-  { name: 'Product A' },
-  { name: 'Product B' },
-  { name: 'Product C' },
-  { name: 'Product D' },
-  { name: 'Product E' },
-]
+// import { Link } from 'react-scroll'
+
+// import logoBg from '../assets/logo3-removebg-preview.png'
+// import ScrolledLogoBg from '../assets/logo3.png'
+
+
+
+
+
+// const Header = () => {
+
+//   const [scrolled, setScrolled] = useState(false)
+
+
+//   useEffect(() => {
+//     const onScroll = () => {
+//       setScrolled(window.scrollY > 10)
+//     }
+
+//     window.addEventListener('scroll', onScroll, { passive: true })
+//     return () => window.removeEventListener('scroll', onScroll)
+//   }, [])
+
+//   return (
+//     <header className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ${scrolled ? 'bg-primary shadow-md' : 'bg-transparent'}`}>
+// <div className="w-7xl mx-auto flex justify-between items-center h-[85px] ">
+// <div>
+//   <img className='h-[85px]' src={scrolled? ScrolledLogoBg : logoBg} alt="" />
+// </div>
+// <ul className='flex text-white gap-8'>
+
+    
+//     <li>Home</li>
+//     <li>
+//   <Link activeClass="active" to="products"spy={true} > Products</Link>
+//     </li>
+//     <li>
+//   <Link activeClass="active" to="partners"spy={true} > Partners</Link>
+//     </li>
+//     <li>
+//   <Link activeClass="active" to="about"spy={true} >About Us</Link>
+//     </li>
+
+
+
+// </ul>
+// <div>
+// <li>
+//   <Link activeClass="active" to="contact"spy={true} > 
+  
+//   <button className='bg-orange-400 px-5 py-2 text-white rounded-full'>Contact Us</button>
+//   </Link>
+//     </li>
+// </div>
+// </div>
+
+//     </header>
+//   )
+// }
+// export default Header
+import { useState, useEffect } from "react";
+import { Link } from "react-scroll";
+import { Menu, X } from "lucide-react";
+import logoBg from "../assets/logo3-removebg-preview.png";
+import ScrolledLogoBg from "../assets/greenBgLogo.png";
+
+
 
 const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const [productsOpen, setProductsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 10)
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ${scrolled ? 'bg-primary shadow-md' : 'bg-transparent'}`}>
-  <nav aria-label="Global" className={`w-full flex items-stretch justify-between px-4 transition-all duration-300 ${scrolled ? 'h-12' : 'h-24 lg:h-28'}`}>
-        <div className="flex lg:hidden items-stretch h-full">
-          <a href="/" className="-m-0 p-0 flex items-stretch h-full">
-            <img
-              alt=""
-              src={largeScreenLogo}
-              className="h-full w-auto transition-all duration-300"
-              style={{ display: 'block' }}
-            />
-          </a>
-        </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon aria-hidden="true" className="size-6" />
-          </button>
-        </div>
-  <div className="hidden lg:flex lg:items-stretch lg:gap-4 lg:w-full">
-          <div className="flex items-stretch justify-center flex-1 h-full">
-            <a href="/" className="-m-0 p-0 flex items-stretch h-full">
-              <img
-                alt=""
-                src={largeScreenLogo}
-                className="h-full w-auto block transition-all duration-300"
-              />
-            </a>
-          </div>
+    <header
+      className={`fixed w-full z-50 top-0 left-0 transition-all duration-300 ${
+        scrolled ? "bg-primary shadow-md" : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto flex justify-between items-center h-[100px] px-4 md:px-8 ">
+        {/* Logo */}
+        <img
+          className="  h-[100px] w-[150px] cursor-pointer hidden md:block"
+          src={scrolled ? ScrolledLogoBg : logoBg}
+          alt="Logo"
+        />
 
-          <div className="flex items-center justify-center flex-1">
-            <a href="#home" className={`font-bold text-white text-center w-full transition-all duration-300 ${scrolled ? 'text-lg' : 'text-2xl'}`}>
-              <span className="nav-underline">Home</span>
-            </a>
-          </div>
-
-          <div className="flex items-center justify-center flex-1">
-            <div
-              className="relative"
-              role="menu"
-              tabIndex={0}
-              onMouseEnter={() => setProductsOpen(true)}
-              onMouseLeave={() => setProductsOpen(false)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault()
-                  setProductsOpen(true)
-                }
-                if (e.key === 'Escape') setProductsOpen(false)
-              }}
-            >
-              <button
-                type="button"
-                aria-haspopup="menu"
-                aria-expanded={productsOpen}
-                onFocus={() => setProductsOpen(true)}
-                onBlur={() => setProductsOpen(false)}
-                className={`flex items-center gap-x-1 font-bold text-white transition-all duration-300 ${scrolled ? 'text-lg gap-x-1' : 'text-2xl gap-x-2'}`}
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex text-white gap-8 font-medium">
+          {["home", "products", "partners", "about"].map((item) => (
+            <li key={item} className="relative group cursor-pointer">
+              <Link
+                to={item}
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="transition-colors duration-200"
               >
-                <span className="nav-underline">Products</span>
-                <ChevronDownIcon aria-hidden="true" className="size-7 flex-none text-gray-500" />
-              </button>
+                {item === "about"
+                  ? "About Us"
+                  : item.charAt(0).toUpperCase() + item.slice(1)}
+              </Link>
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+            </li>
+          ))}
+        </ul>
 
-              {productsOpen && (
-                <div
-                  className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 overflow-hidden rounded-3xl bg-gray-800 outline-1 -outline-offset-1 outline-white/10 transition"
-                >
-                  <div className="p-4">
-                    {products.map((item) => (
-                      <div
-                        key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5"
-                      >
-                        <div className="flex-auto">
-                          <p className="block font-semibold text-white">
-                            {item.name}
-                            <span className="absolute inset-0" />
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center flex-1">
-            <a href="#partners" className={`font-bold text-white text-center w-full transition-all duration-300 ${scrolled ? 'text-lg' : 'text-2xl'}`}>
-              <span className="nav-underline">Partners</span>
-            </a>
-          </div>
-
-          <div className="flex items-center justify-center flex-1">
-            <a href="#about" className={`font-bold text-white text-center w-full transition-all duration-300 ${scrolled ? 'text-lg' : 'text-2xl'}`}>
-              <span className="nav-underline">About</span>
-            </a>
-          </div>
-
-          <div className="flex items-center justify-center flex-1">
-            <Button
-              className={`font-bold rounded-4xl transition-all duration-200 ${scrolled ? 'text-lg px-3 py-1 bg-white text-primary hover:bg-gray-100' : 'text-2xl px-4 py-2 bg-primary text-white hover:bg-primary'}`}>
+        {/* Contact Button (Desktop) */}
+        <div className="hidden md:block">
+          <Link to="contact" spy={true} smooth={true}>
+            <button className="bg-orange-400 px-5 py-2 text-white rounded-full hover:bg-orange-500 transition-colors">
               Contact Us
-            </Button>
-          </div>
-        </div>
-      </nav>
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-        <div className="fixed inset-0 z-50" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
-          <div className="flex items-center justify-between">
-            <a href="/" className="-m-0 p-0">
-              <img
-                alt=""
-                src={smallScreenLogo}
-                className="h-16 w-auto"
-                style={{ display: 'block' }}
-              />
-            </a>
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-400"
-            >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon aria-hidden="true" className="size-6" />
             </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-white/10">
-              <div className="space-y-2 py-6">
+          </Link>
+        </div>
 
-                <a
-                  href="#home"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                >
-                  <span className="nav-underline">Home</span>
-                </a>
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white/5">
-                    <span className="nav-underline">Products</span>
-                    <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {products.map((item) => {
-                      const slug = item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-                      return (
-                        <a
-                          key={item.name}
-                          href={`#product-${slug}`}
-                          className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                        >
-                          <span className="nav-underline">{item.name}</span>
-                        </a>
-                      )
-                    })}
-                  </DisclosurePanel>
-                </Disclosure>
-                <a
-                  href="#partners"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                >
-                  <span className="nav-underline">Partners</span>
-                </a>
-                <a
-                  href="#about"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                >
-                  <span className="nav-underline">About</span>
-                </a>
-              </div>
-              <div className="py-6">
-                <Button
-                  className={`rounded-4xl px-4 py-2 text-sm transition-colors duration-200 ${scrolled ? 'bg-white text-primary hover:bg-gray-100' : 'bg-primary text-white data-active:bg-primary data-hover:bg-primary'}`}>
-                  Contact Us
-                </Button>
-              </div>
-            </div>
-          </div>
-        </DialogPanel>
-      </Dialog>
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white z-50"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      <div
+        className={`md:hidden fixed top-[85px] left-0 w-full bg-primary text-white transition-all duration-300 overflow-hidden ${
+          menuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <ul className="flex flex-col items-start px-6 py-4 space-y-4 font-medium">
+          {["home", "products", "partners", "about", "contact"].map((item) => (
+            <li key={item} className="w-full">
+              <Link
+                to={item}
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={() => setMenuOpen(false)}
+                className="block w-full pb-2 border-b border-white/20 hover:text-orange-400 transition-colors"
+              >
+                {item === "about"
+                  ? "About Us"
+                  : item === "contact"
+                  ? "Contact Us"
+                  : item.charAt(0).toUpperCase() + item.slice(1)}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </header>
-  )
-}
-export default Header
+  );
+};
+
+export default Header;

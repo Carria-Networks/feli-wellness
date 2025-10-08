@@ -3,7 +3,7 @@ import { aboutBackground } from "../assets"
 
 const About = () => {
   return (
-    <section className="text-white py-8 px-4"
+    <section id="about" className="text-white py-8 px-4"
       style={{
         background: `
           linear-gradient(
@@ -36,7 +36,7 @@ const About = () => {
             </ul>
           </div>
 
-          <Button className="text-sm/6 font-semibold text-white bg-primary px-4 py-2 rounded-4xl">
+          <Button className="text-sm/6 text-white bg-orange-400 px-4 py-2 rounded-4xl">
             Request Info Pack
           </Button>
         </div>

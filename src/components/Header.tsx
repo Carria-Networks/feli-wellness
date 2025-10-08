@@ -88,10 +88,10 @@ const Header = () => {
         scrolled ? "bg-primary shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center h-[100px] px-4 md:px-8 ">
+      <div className="max-w-7xl mx-auto flex justify-between items-center h-[70px] px-4 md:px-8 ">
         {/* Logo */}
         <img
-          className="  h-[100px] w-[150px] cursor-pointer hidden md:block"
+          className="  h-[70px] w-[100px] cursor-pointer hidden md:block"
           src={scrolled ? ScrolledLogoBg : logoBg}
           alt="Logo"
         />

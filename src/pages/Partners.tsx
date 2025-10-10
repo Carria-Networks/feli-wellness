@@ -1,4 +1,4 @@
-import { Award, Rocket, Target, Users } from "lucide-react"
+// import { Award, Rocket, Target, Users } from "lucide-react"
 import enagicLogo from '../assets/enagic-logo.png'
 import prife from '../assets/prife-logo.jpeg'
 import feliLogo from "../assets/logo3-removebg-preview.png"
@@ -7,28 +7,28 @@ import feliLogo from "../assets/logo3-removebg-preview.png"
 
 const Partners = () => {
 
-  const benefits = [
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: 'Strategic Growth',
-      description: 'Access new markets and scale your business with our extensive network and resources.'
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Collaborative Support',
-      description: 'Work closely with our team to develop solutions that benefit both our customers.'
-    },
-    {
-      icon: <Rocket className="w-8 h-8" />,
-      title: 'Innovation First',
-      description: 'Stay ahead with early access to new features, tools, and market insights.'
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: 'Recognition & Rewards',
-      description: 'Gain visibility through co-marketing opportunities and partner showcases.'
-    }
-  ]
+  // const benefits = [
+  //   {
+  //     icon: <Target className="w-8 h-8" />,
+  //     title: 'Strategic Growth',
+  //     description: 'Access new markets and scale your business with our extensive network and resources.'
+  //   },
+  //   {
+  //     icon: <Users className="w-8 h-8" />,
+  //     title: 'Collaborative Support',
+  //     description: 'Work closely with our team to develop solutions that benefit both our customers.'
+  //   },
+  //   {
+  //     icon: <Rocket className="w-8 h-8" />,
+  //     title: 'Innovation First',
+  //     description: 'Stay ahead with early access to new features, tools, and market insights.'
+  //   },
+  //   {
+  //     icon: <Award className="w-8 h-8" />,
+  //     title: 'Recognition & Rewards',
+  //     description: 'Gain visibility through co-marketing opportunities and partner showcases.'
+  //   }
+  // ]
   return (
 <section id="partners  " className="bg-gray-100">
   <div  className="">

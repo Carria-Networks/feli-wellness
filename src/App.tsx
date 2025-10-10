@@ -1,6 +1,6 @@
 import './App.css'
 import { Footer, Header, Hero } from './components'
-import { DistributorRelationships, About, Contacts, Partners, Products, Testimonies } from './pages'
+import { DistributorRelationships, About, Contacts, Partners, Products } from './pages'
 
 function App() {
 

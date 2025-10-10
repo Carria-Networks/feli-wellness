@@ -29,9 +29,9 @@ const DistributorRelationships = () => {
       <div>
  
 <div className="my-5">
-            <a href="" className="p-2 font-bold rounded bg-gray-200 ">
-            Official Distributor Relationships
-            </a>
+        <h2 className="text-2xl font-bold text-gray-800">
+                    Official Distributors Relationships
+                    </h2>
 
 </div>
 

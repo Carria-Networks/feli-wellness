@@ -12,10 +12,9 @@ const Contacts = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-4">
        
-
-            <p>
-                <a className='bg-gray-200 rounded p-2 font-bold uppercase' >Contact Information</a>
-            </p>
+          <h2 className="text-2xl font-bold">
+         Contact Information
+                    </h2>
             <p className="">For questions about products, demos, or partnership opportunities, please reach out — we`re here to help.</p>
 
             <div className="mt-6 rounded-lg py-6">

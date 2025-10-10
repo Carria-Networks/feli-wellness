@@ -52,7 +52,7 @@ const wellnessImages = [wimage1, wimage2, wimage3, wimage4, wimage5, wimage6, wi
     return (
         <div id="products" className="md:py-20 py-10 bg-gray-100">
             {/* Added horizontal padding to the main container */}
-            <div className="relative max-w-7xl mx-auto overflow-hidden px-4 sm:px-6 lg:px-8"> 
+            <div className="relative max-w-7xl mx-auto overflow-hidden px-4 md:-x-0 "> 
                 {/* Header */}
                 <div className="space-y-4 mb-8">
                     {/* <p className="text-start">

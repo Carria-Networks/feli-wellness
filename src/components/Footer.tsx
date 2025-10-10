@@ -70,7 +70,7 @@ export default function Footer() {
             <span className="text-sm sm:text-center">© {getCurrentYear()} <a href="/" className="hover:underline">Feli Wellness</a>. All Rights Reserved.
             </span>
             </p>
-            <p className="text-sm mt-1">        <span className="text-sm text-black sm:text-center">Developed by <a href="https://carrianetworks.com" className="underline  text-blue-500">Carria Networks</a></span></p>
+            <p className="text-sm mt-1">        <span className="text-sm text-black sm:text-center">A Creation Of <a href="https://carrianetworks.com" className="underline  text-blue-500">Carria Networks</a></span></p>
           </div>
 
           {/* Scroll to Top Button */}

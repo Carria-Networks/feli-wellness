@@ -41,8 +41,7 @@ const Partners = () => {
                     </h2>
                 <p className="text-md">Why partner with us</p>
             </p>
-            <button className="border md:px-6 px-2 py-2 rounded-full border-white text-white cursor-pointer">BECOME A PARTNER</button>
-
+      
        </div>
       
 

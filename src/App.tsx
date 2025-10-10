@@ -12,8 +12,8 @@ function App() {
         <DistributorRelationships />
         <About />
         {/* <Testimonies /> */}
-        <Contacts />
         <Partners />
+        <Contacts />
 
 
       <Footer />

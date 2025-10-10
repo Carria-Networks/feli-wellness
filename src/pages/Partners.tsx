@@ -1,6 +1,8 @@
 import { Award, Rocket, Target, Users } from "lucide-react"
 import enagicLogo from '../assets/enagic-logo.png'
 import prife from '../assets/prife-logo.jpeg'
+import feliLogo from "../assets/logo3-removebg-preview.png"
+
 
 
 const Partners = () => {
@@ -28,20 +30,20 @@ const Partners = () => {
     }
   ]
   return (
-<section id="partners">
-  <div  className="bg-primary ">
+<section id="partners  " className="bg-gray-100">
+  <div  className="">
   <div className="max-w-7xl mx-auto py-16 space-y-6" >
 <div className="flex justify-between items-center mb-10">
 <p>
-                <a className=' text-gray-100 font-bold text-lg' >PARTNERS</a>
+                <a className=' text-gray-100 font-bold text-lg uppercase' > Our Partnerships</a>
                 <p className="text-md">Why partner with us</p>
             </p>
             <button className="border md:px-6 px-2 py-2 rounded-full border-white text-white cursor-pointer">BECOME A PARTNER</button>
 
-</div>
+       </div>
       
 
-            <div className="grid md:grid-cols-4 gap-8">
+            {/* <div className="grid md:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (
             <div 
               key={index}
@@ -52,17 +54,25 @@ const Partners = () => {
               <p className="text-purple-200">{benefit.description}</p>
             </div>
           ))}
-        </div>
+        </div> */}
+
+        <p>Feli Wellness, Prife International, and Enagic function as a single entity, combining their expertise to offer cutting-edge wellness solutions. </p>
+    <p>his unified operation leverages Prife’s global e-commerce platform and innovative consumer electronics with Enagic’s pioneering water ionization technology, known for producing Kangen Water®️—electrolytically-reduced, hydrogen-rich drinking water</p>
+     
+    <p>Together, we provide a synergistic range of products tailored for diverse markets, including Africa, ensuring accessibility and impact.</p>
       </div>
       </div>
-      <div className="w-7xl mx-auto md:flex  md:flex-col justify-center items-center py-16">
-        <p>Our Trusted Partners</p>
-        <div className="grid md:grid-cols-2">
+      <div className="w-7xl mx-auto md:flex  md:flex-col justify-center items-center py-5 ">
+        {/* <p>Our Trusted Partners</p> */}
+        <div className="grid md:grid-cols-3">
           <div>
             <img className="h-44 m-4" src={enagicLogo} alt="airbnb logo" />
           </div>
           <div>
             <img className="h-44 m-4" src={prife} alt="netflix logo" />
+          </div>
+          <div>
+            <img className="h-44 m-4" src={feliLogo} alt="netflix logo" />
           </div>
         </div>
 

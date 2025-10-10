@@ -16,8 +16,8 @@ const About = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       }}>
-      <div className="max-w-screen-xl mx-auto lg:py-16">
-        <div className="max-w-3xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto lg:py-16">
+        <div className=" mx-auto ">
           <h1 className="mb-4 text-4xl tracking-tight font-extrabold text-white">Turn Wellness into Wealth</h1>
           <p className="mb-6 font-light text-lg">
             Beyond selling great products, Feli Wellness helps individuals build sustainable income via a structured
@@ -28,7 +28,7 @@ const About = () => {
             We provide training, mentoring, and marketing assets to help partners scale.
           </p>
 
-          <div className="w-full max-w-prose mx-auto mb-6">
+          <div className="w-full mb-6">
             <ul className="font-light text-lg list-disc list-inside text-left">
               <li className="mb-2">Structured onboarding & product certification</li>
               <li className="mb-2">Personal growth and sales training</li>

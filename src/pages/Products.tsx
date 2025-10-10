@@ -130,18 +130,16 @@ const Products = () => {
             <div className="relative max-w-7xl mx-auto overflow-hidden px-4 sm:px-6 lg:px-8"> 
                 {/* Header */}
                 <div className="space-y-4 mb-8">
-                    <p className="text-start">
+                    {/* <p className="text-start">
                         <span className="p-2 font-bold rounded bg-gray-200 inline-block text-sm">
                             Innovative Wellness Products
                         </span>
-                    </p>
+                    </p> */}
                     <h2 className="text-2xl font-bold text-gray-800">
-                        Curated Products for a Healthier You
+                    Innovative Wellness Products
                     </h2>
                     <p className="text-md text-gray-600 max-w-3xl">
-                        We offer a curated range of products designed to support better health — from
-                        Kangen water to high-quality health supplements and advanced devices designed to
-                        support a healthier lifestyle.
+                    Feli Wellness offers high-quality health supplements and advanced wellness devices designed to support detoxification, immunity, energy boosting, and preventive health
                     </p>
                 </div>
 

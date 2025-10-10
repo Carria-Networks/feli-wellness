@@ -22,7 +22,7 @@ const Contacts = () => {
               <ul className="space-y-2 ">
                 <li>
                 <Phone className="inline-block mr-2 text-orange-400" size={16} />
-                  <a href="tel:+254723456789" className=" hover:underline">+254 723-456-789</a>
+                  <a href="tel:+254723456789" className=" hover:underline">+254 720 387874</a>
                 </li>
                 <li>
            <Mail className="inline-block mr-2 text-orange-400" size={16} />

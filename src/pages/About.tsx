@@ -18,10 +18,10 @@ const About = () => {
       }}>
       <div className="max-w-7xl mx-auto lg:py-16">
         <div className=" mx-auto ">
-      
+
           <h2 className="text-2xl font-bold text-white">
-          Turn Wellness into Wealth
-                    </h2>
+            Turn Wellness into Wealth
+          </h2>
           <p className="mb-6 font-light text-lg">
             Beyond selling great products, Feli Wellness helps individuals build sustainable income via a structured
             distributor program.

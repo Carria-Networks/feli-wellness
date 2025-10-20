@@ -6,16 +6,14 @@ function App() {
 
   return (
     <main className="">
-        <Header />
-        <Hero />
-        <Products />
-        <DistributorRelationships />
-        <About />
-        {/* <Testimonies /> */}
-        <Partners />
-        <Contacts />
-
-
+      <Header />
+      <Hero />
+      <Products />
+      <DistributorRelationships />
+      <About />
+      {/* <Testimonies /> */}
+      <Partners />
+      <Contacts />
       <Footer />
     </main>
   )

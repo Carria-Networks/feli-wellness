@@ -6,6 +6,8 @@ import contactBackground from './20.jpg';
 import largeScreenLogo from './web/icon-512-maskable.png';
 import smallScreenLogo from './web/icon-512.png';
 import heroBackground from './hero_background.mp4';
+import missionImage from './mi-pham-FtZL0r4DZYk-unsplash.jpg';
+import visionImage from './cybele-and-bevan-9p2ZdXi5lqs-unsplash.jpg';
 
 export {
   productsBackground,
@@ -15,5 +17,7 @@ export {
   contactBackground,
   largeScreenLogo,
   smallScreenLogo,
-  heroBackground
+  heroBackground,
+  missionImage,
+  visionImage
 };

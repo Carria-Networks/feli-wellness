@@ -1,53 +1,88 @@
 import { Mail, MapPin, Phone } from "lucide-react"
 
-
-
 const Contacts = () => {
+  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.818451731631!2d36.82194621475373!3d-1.2920659990526715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10b5c165d75d%3A0xc6657c91a720d5d2!2sNairobi%20Central%20Business%20District!5e0!3m2!1sen!2ske!4v1633000000000!5m2!1sen!2ske";
+
   return (
     <section
       id="contact"
-      className="p-8 "
+      className="bg-gray-50 py-20 md:py-32"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-6 md:px-8">
+
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3">
+            Get in <span className="text-orange-500">Touch</span>
+          </h2>
+          <p className="text-lg text-gray-600">
+            For questions about products, demos, or partnership opportunities, please reach out — we're here to help.
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="space-y-4">
 
-            <h2 className="text-2xl font-bold">
-              Contact Information
-            </h2>
-            <p className="">For questions about products, demos, or partnership opportunities, please reach out — we`re here to help.</p>
+          <div className="space-y-10 p-4">
 
-            <div className="mt-6 rounded-lg py-6">
-              <h3 className="text-lg font-semibold mb-3">Contact details</h3>
-              <ul className="space-y-2 ">
-                <li>
-                  <Phone className="inline-block mr-2 text-orange-400" size={16} />
-                  <a href="tel:+254723456789" className=" hover:underline">+254768900700</a>
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-800">Direct Contact</h3>
+
+              <ul className="space-y-6">
+                <li className="flex items-start">
+                  <Phone className="flex-shrink-0 mr-4 text-orange-500 mt-1" size={24} />
+                  <div>
+                    <p className="text-sm font-medium text-gray-500">Call Us</p>
+                    <a href="tel:+254768900700" className="text-lg font-semibold text-gray-900 hover:text-orange-500 transition-colors">+254 768 900 700</a>
+                  </div>
                 </li>
-                <li>
-                  <Mail className="inline-block mr-2 text-orange-400" size={16} />
-                  <a href="mailto:info@feliwellness.com" className="hover:underline">info@feliwellness.com</a>
+
+                <li className="flex items-start">
+                  <Mail className="flex-shrink-0 mr-4 text-orange-500 mt-1" size={24} />
+                  <div>
+                    <p className="text-sm font-medium text-gray-500">Email Address</p>
+                    <a href="mailto:info@feliwellness.com" className="text-lg font-semibold text-gray-900 hover:text-orange-500 transition-colors">info@feliwellness.com</a>
+                  </div>
                 </li>
-                <li>
-                  <MapPin className="inline-block mr-2 text-orange-400" size={16} />
-                  <span>Nairobi, Kenya</span>
+
+                <li className="flex items-start">
+                  <MapPin className="flex-shrink-0 mr-4 text-orange-500 mt-1" size={24} />
+                  <div>
+                    <p className="text-sm font-medium text-gray-500">Location</p>
+                    <span className="text-lg font-semibold text-gray-900">Nairobi, Kenya</span>
+                  </div>
                 </li>
               </ul>
             </div>
+
+            <div className="pt-8">
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Find Our Office</h3>
+              <div className="h-64 w-full overflow-hidden rounded-xl shadow-lg border border-gray-300">
+                <iframe
+                  src={mapEmbedUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Office Location Map"
+                ></iframe>
+              </div>
+            </div>
+
           </div>
 
-          <div>
-            <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-8">
-              <h2 className="mb-6 text-2xl font-extrabold text-gray-800">Get in Touch</h2>
+          <div className=''>
+            <div className="bg-white rounded-xl shadow-lg p-6 sm:p-10 border border-gray-100">
+              <h2 className="mb-8 text-3xl font-bold text-gray-900">Send Us a Message</h2>
 
               <form action="#" className="space-y-6">
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="fullName" className="block mb-2 text-sm font-medium text-gray-700">Full name</label>
                     <input
                       type="text"
                       id="fullName"
-                      className="block w-full p-3 text-gray-700 bg-gray-50 border border-gray-300 rounded-lg text-sm transition-colors duration-200 ease-in-out hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-400"
+                      className="block w-full px-4 py-3 text-gray-800 border border-gray-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-500 transition-all duration-200"
                       placeholder="Your full name"
                       required
                     />
@@ -58,7 +93,7 @@ const Contacts = () => {
                     <input
                       type="tel"
                       id="phone"
-                      className="block w-full p-3 text-gray-700 bg-gray-50 border border-gray-300 rounded-lg text-sm transition-colors duration-200 ease-in-out hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-400"
+                      className="block w-full px-4 py-3 text-gray-800 border border-gray-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-500 transition-all duration-200"
                       placeholder="+254 7xx xxx xxx"
                       required
                     />
@@ -70,8 +105,8 @@ const Contacts = () => {
                   <input
                     type="email"
                     id="email"
-                    className="block w-full p-3 text-gray-700 bg-gray-50 border border-gray-300 rounded-lg text-sm transition-colors duration-200 ease-in-out hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-400"
-                    placeholder="Your email"
+                    className="block w-full px-4 py-3 text-gray-800 border border-gray-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-500 transition-all duration-200"
+                    placeholder="you@example.com"
                     required
                   />
                 </div>
@@ -80,14 +115,17 @@ const Contacts = () => {
                   <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-700">Your message</label>
                   <textarea
                     id="message"
-                    rows={6}
-                    className="block w-full p-3 text-gray-700 bg-gray-50 border border-gray-300 rounded-lg text-sm transition-colors duration-200 ease-in-out hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-400"
-                    placeholder="How can we help?"
+                    rows={5}
+                    className="block w-full px-4 py-3 text-gray-800 border border-gray-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-500 transition-all duration-200"
+                    placeholder="How can we help you achieve wellness?"
                   ></textarea>
                 </div>
 
-                <button type="submit" className="py-3 px-6 text-sm font-medium text-center rounded-4xl bg-orange-400 text-white focus:ring-4 focus:outline-none focus:ring-orange-200 hover:bg-orange-500 transition-colors duration-200">
-                  Send message
+                <button
+                  type="submit"
+                  className="w-full py-3 px-6 text-base font-semibold text-center rounded-lg bg-orange-500 text-white shadow-lg shadow-orange-200/50 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-200 transition-all duration-300"
+                >
+                  Send Message
                 </button>
               </form>
             </div>

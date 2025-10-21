@@ -69,7 +69,7 @@ const ProductSection = ({ title, description, extraInfo, images, link = "#" }: P
   return (
     <div className="mb-16">
       <div>
-        <a 
+        <a
           href={link}
           target={link === "#" ? "_self" : "_blank"}
           rel={link === "#" ? "" : "noopener noreferrer"}
@@ -106,12 +106,15 @@ const Products = () => {
     <div id="products" className="md:py-20 py-10 bg-gray-100">
       <div className="relative max-w-7xl mx-auto overflow-hidden px-4 md:px-8">
         <div className="space-y-4 mb-12">
-          <h2 className="text-2xl font-bold text-gray-800">
-            Innovative Wellness Products
-          </h2>
-          <p className="text-md text-gray-600 max-w-3xl leading-relaxed">
-            Feli Wellness offers high-quality health supplements and advanced wellness devices designed to support detoxification, immunity, energy boosting, and preventive health.
-          </p>
+          <div className="mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              What We Do
+            </h2>
+          </div>
+          <p className="text-md text-gray-600">
+            Feli Wellness is a distributor of high-quality health, wellness, and lifestyle products together with Prife
+            International and Enagic. We promote holistic well-being by providing innovative wellness devices,
+            supplements, and health solutions to clients locally and internationally.          </p>
         </div>
 
         <div className="space-y-16">

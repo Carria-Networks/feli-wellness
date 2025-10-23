@@ -73,7 +73,7 @@ const Header = () => {
               className="bg-orange-400 px-5 py-2 text-white rounded-full hover:bg-orange-500 transition-colors focus:outline-none"
               aria-label="Contact Us"
             >
-              Contact Us
+              Contact U
             </button>
           </Link>
         </div>

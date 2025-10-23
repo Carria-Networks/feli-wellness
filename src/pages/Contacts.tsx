@@ -1,8 +1,8 @@
 import { Mail, MapPin, Phone } from "lucide-react"
 
 const Contacts = () => {
-  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.818451731631!2d36.82194621475373!3d-1.2920659990526715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10b5c165d75d%3A0xc6657c91a720d5d2!2sNairobi%20Central%20Business%20District!5e0!3m2!1sen!2ske!4v1633000000000!5m2!1sen!2ske";
 
+  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.857005758215!2d36.841818811914095!3d-1.2577738355931594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f16ecfb93861b%3A0x25442ca3392f343!2sWambui%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1761224210525!5m2!1sen!2ske";
   return (
     <section
       id="contact"
